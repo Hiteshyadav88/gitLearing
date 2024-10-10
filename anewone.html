@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click here</button>
+    <p id="pera">here the item will display</p>
+    <button class="but" onclick="prss()">press</button>
+    <p id="pet">texting the contnet</p>
+    <label for="">try this</label>
+        <input type="text" id="in">
+    <p id="focus"></p>
+
+    <label for="">next change</label>
+    <input type="text" id="int">
+    <p id="focuses"></p>
+
+    <script type="module">
+        import { add, sub } from "./basicjavascrpt.mjs"
+        function add1(x, y) {
+            return x + y;
+        }
+        document.getElementById("btn").addEventListener("click", () => {
+            document.getElementById("pera").innerText = add(3, 6);
+        })
+         document.getElementById("in").addEventListener("focus", () => {
+                document.getElementById("focus").innerText ="this is input ield";
+         })
+          document.getElementById("in").addEventListener("blur", () => {
+                document.getElementById("focus").innerText = "this is lost input ield";
+            })
+             document.getElementById("int").addEventListener("change", () => {
+                    document.getElementById("focuses").innerText = `${}`;
+                })
+        //         let prss=()=>{
+        // document.getElementById("pet").innerText=`${add1(4,6)}`;
+        //         }
+        //           let prass = () => {
+        //                 document.getElementById("pet").innerText = `${add1(4, 6)}`;
+        //             }
+    </script>
+</body>
+
+</html>
